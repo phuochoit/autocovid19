@@ -88,31 +88,47 @@ $results_jons = array(
 );
 $aa = '{
     "messages": [
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
-      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
-      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "}
-    ]
+       {
+         "attachment":{
+           "type":"template",
+           "payload":{
+             "template_type":"generic",
+             "image_aspect_ratio": "square",
+             "elements":[
+               {
+                 "title":"Chatfuel Rockets Jersey",
+                 "image_url":"https://rockets.chatfuel.com/assets/shirt.jpg",
+                 "subtitle":"Size: M",
+                 "buttons":[
+                   {
+                     "type":"web_url",
+                     "url":"https://rockets.chatfuel.com/store",
+                     "title":"View Item"
+                   }
+                 ]
+               },
+               {
+                 "title":"Chatfuel Rockets Jersey",
+                 "image_url":"https://rockets.chatfuel.com/assets/shirt.jpg",
+                 "subtitle":"Size: L",
+                 "default_action": {
+                   "type": "web_url",
+                   "url": "https://rockets.chatfuel.com/store",
+                   "messenger_extensions": true
+                 },
+                 "buttons":[
+                   {
+                     "type":"web_url",
+                     "url":"https://rockets.chatfuel.com/store",
+                     "title":"View Item"
+                   }
+                 ]
+               }
+             ]
+           }
+         }
+       }
+     ]
    }';
 // print json_encode($results_jons);
 print $aa;
