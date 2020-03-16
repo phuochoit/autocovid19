@@ -63,4 +63,16 @@ foreach ($table->find('tr') as $k => $result) {
     }
 }
 
-print json_encode($results);
+$results_jons = array(
+    'messages' => array(array(
+        'attachment' => array(
+            "type"=>"template",
+            "payload"=> array(
+                "template_type"=>"list",
+                "top_element_style">"large",
+                "elements"=> $results
+            )
+        )
+    ))
+);
+print json_encode($results_jons);
