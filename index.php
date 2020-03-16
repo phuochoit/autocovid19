@@ -63,4 +63,4 @@ foreach ($table->find('tr') as $k => $result) {
     }
 }
 
-var_dump($results);
+print json_encode($results);
