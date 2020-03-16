@@ -57,7 +57,7 @@ foreach ($table->find('tr') as $k => $result) {
             'tong_sochet' =>  $result->find('th', 2)->plaintext,
             'tong_hoiphuc' =>  $result->find('th', 3)->plaintext,
         );
-        $results[]['text'] = 'Tổng Số Ca Nhiễm '.$me['totla_soca'].' Số ca tử vong '.$me['tong_sochet'].' Số Ca đã xuát Viện '. $me['tong_hoiphuc'];
+        $results[]['text'] = 'Tổng Số Ca Nhiễm '.$me['totla_soca'].' Số ca tử vong '.$me['tong_sochet'].' Số Ca đã xuất Viện '. $me['tong_hoiphuc'];
     }else{
         $msa =  array(
             'ten' => $result->find('td a', 0)->plaintext,
@@ -65,7 +65,7 @@ foreach ($table->find('tr') as $k => $result) {
             'sochet' =>  $result->find('td', 2)->plaintext,
             'hoiphuc' =>  $result->find('td', 3)->plaintext,
         );
-        $results[]['text'] = 'Tỉnh Thành Phố '.$msa['ten'].' Số Ca Nhiễm '.$msa['soca'].' Số ca tử vong '.$msa['sochet'].' Số Ca đã xuát Viện '. $msa['hoiphuc'];
+        $results[]['text'] = 'Tỉnh Thành Phố '.$msa['ten'].' Số Ca Nhiễm '.$msa['soca'].' Số ca tử vong '.$msa['sochet'].' Số Ca đã xuất Viện '. $msa['hoiphuc'];
 
     }
 }
@@ -88,6 +88,27 @@ $results_jons = array(
 );
 $aa = '{
     "messages": [
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
+      {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
+      {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
       {"text": "Tỉnh Thành Phố Hà Nội Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 0 "},
       {"text": "Tỉnh Thành Phố Vĩnh Phúc Số Ca Nhiễm 11  Số ca tử vong 0  Số Ca đã xuát Viện 11"},
       {"text": "Tỉnh Thành Phố Bình Thuận Số Ca Nhiễm 9  Số ca tử vong 0  Số Ca đã xuát Viện 0 "}
