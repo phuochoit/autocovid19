@@ -65,11 +65,11 @@ foreach ($table->find('tr') as $k => $result) {
             'sochet' =>  $result->find('td', 2)->plaintext,
             'hoiphuc' =>  $result->find('td', 3)->plaintext,
         );
-        $results_items[] = $items['ten'] . ' Số Ca Nhiễm ' . $items['soca'] . ' Số ca tử vong ' . $items['sochet'] . ' Số Ca đã xuất Viện ' . $items['hoiphuc'];
+        $results_items[] = $items['ten'] . ' Số Ca Nhiễm ' . $items['soca'] . ' Số ca tử vong ' . $items['sochet'] . ' Số Ca đã xuất Viện ' . $items['hoiphuc'].'. \\n';
     }
 }
 
-$result_total[]['text'] = implode('\n', $results_items);
+$result_total[]['text'] = implode(' ', $results_items);
 
 $results_jons = array(
     'messages' =>  $result_total
