@@ -44,48 +44,35 @@ $content = $html->find('#mw-content-text', 0);
 $table = $content->find('table.wikitable.sortable.mw-collapsible tbody', 0);
 $tr_yable = $table->find('tr');
 $total =  count($tr_yable) - 1;
-$results = array();
-
+$results_items = array();
+$result_total[]['text'] = 'Cập nhật Số ca nhiễm virus Covid 19 Tại Việt Nam Ngày ' . date('d/m/Y');
 foreach ($table->find('tr') as $k => $result) {
 
     if ($k == 0 || $k == $total)
         continue;
-    if($k == $total-1){
-        $me =  array(
+    if ($k == $total - 1) {
+        $items_total =  array(
             'total_ten' => $result->find('th', 0)->plaintext,
             'totla_soca' =>  $result->find('th', 1)->plaintext,
             'tong_sochet' =>  $result->find('th', 2)->plaintext,
             'tong_hoiphuc' =>  $result->find('th', 3)->plaintext,
         );
-        $results[]['text'] = 'Tổng Số Ca Nhiễm '.$me['totla_soca'].' Số ca tử vong '.$me['tong_sochet'].' Số Ca đã xuất Viện '. $me['tong_hoiphuc'];
-    }else{
-        $msa =  array(
+        $result_total[]['text'] = 'Tổng Số Ca Nhiễm ' . $items_total['totla_soca'] . ' Số ca tử vong ' . $items_total['tong_sochet'] . ' Số Ca đã xuất Viện ' . $items_total['tong_hoiphuc'];
+    } else {
+        $items =  array(
             'ten' => $result->find('td a', 0)->plaintext,
             'soca' =>  $result->find('td', 1)->plaintext,
             'sochet' =>  $result->find('td', 2)->plaintext,
             'hoiphuc' =>  $result->find('td', 3)->plaintext,
         );
-        $results[]['text'] = 'Tỉnh Thành Phố '.$msa['ten'].' Số Ca Nhiễm '.$msa['soca'].' Số ca tử vong '.$msa['sochet'].' Số Ca đã xuất Viện '. $msa['hoiphuc'];
-
+        $results_items[] = $items['ten'] . ' Số Ca Nhiễm ' . $items['soca'] . ' Số ca tử vong ' . $items['sochet'] . ' Số Ca đã xuất Viện ' . $items['hoiphuc'];
     }
 }
 
-// $results_jons = array(
-//     'messages' => array(array(
-//         'attachment' => array(
-//             "type"=>"template",
-//             "payload"=> array(
-//                 "template_type"=>"list",
-//                 "top_element_style">"large",
-//                 "elements"=> $results
-//             )
-//         )
-//     ))
-// );
+$result_total[]['text'] = implode('\n', $results_items);
 
 $results_jons = array(
-    'messages' =>  $results
+    'messages' =>  $result_total
 );
 
-/print json_encode($results_jons);
-
+print json_encode($results_jons);
