@@ -88,47 +88,21 @@ $results_jons = array(
 );
 $aa = '{
     "messages": [
-       {
-         "attachment":{
-           "type":"template",
-           "payload":{
-             "template_type":"generic",
-             "image_aspect_ratio": "square",
-             "elements":[
-               {
-                 "title":"Chatfuel Rockets Jersey",
-                 "image_url":"https://rockets.chatfuel.com/assets/shirt.jpg",
-                 "subtitle":"Size: M",
-                 "buttons":[
-                   {
-                     "type":"web_url",
-                     "url":"https://rockets.chatfuel.com/store",
-                     "title":"View Item"
-                   }
-                 ]
-               },
-               {
-                 "title":"Chatfuel Rockets Jersey",
-                 "image_url":"https://rockets.chatfuel.com/assets/shirt.jpg",
-                 "subtitle":"Size: L",
-                 "default_action": {
-                   "type": "web_url",
-                   "url": "https://rockets.chatfuel.com/store",
-                   "messenger_extensions": true
-                 },
-                 "buttons":[
-                   {
-                     "type":"web_url",
-                     "url":"https://rockets.chatfuel.com/store",
-                     "title":"View Item"
-                   }
-                 ]
-               }
-             ]
-           }
-         }
-       }
-     ]
-   }';
+      {
+        "text":  "Did you enjoy the last game of the CF Rockets?",
+        "quick_replies": [
+          {
+            "title":"Loved it!",
+            "block_names": ["Block 1", "Block 2"]
+          },
+          {
+            "title":"Not really...",
+            "url": "https://rockets.chatfuel.com/api/sad-match",
+            "type":"json_plugin_url"
+          }
+        ]
+      }
+    ]
+  }';
 // print json_encode($results_jons);
 print $aa;
