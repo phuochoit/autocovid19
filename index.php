@@ -86,10 +86,10 @@ foreach ($table->find('tr') as $k => $result) {
 $results_jons = array(
     'messages' =>  $results
 );
-$aa = '{
-    "messages": [
-      {"text": "Welcome to the Chatfuel Rockets!"},
-      {"text": "What are you up to?"}
-    ]
-   }';
-print $aa;
+// $aa = '{
+//     "messages": [
+//       {"text": "Welcome to the Chatfuel Rockets!"},
+//       {"text": "What are you up to?"}
+//     ]
+//    }';
+print json_encode($results_jons);
